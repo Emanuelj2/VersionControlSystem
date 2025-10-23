@@ -1,4 +1,5 @@
-﻿using VersionControlSystem.Models;
+﻿using System.Text.Json;
+using VersionControlSystem.Models;
 
 namespace VersionControlSystem.Storage
 {
@@ -22,13 +23,13 @@ namespace VersionControlSystem.Storage
                 return new List<IndexEntry>(); //return an empty list
             }
             string json = File.ReadAllText(Core.Constants.INDEX_FILE);
-            return System.Text.Json.JsonSerializer.Deserialize<List<IndexEntry>>(json) ?? new List<IndexEntry>();
+            return JsonSerializer.Deserialize<List<IndexEntry>>(json) ?? new List<IndexEntry>();
         }
 
         //This method loads the index entries from the index file in JSON format
         public static void Save(List<IndexEntry> entries)
         {
-            string json = System.Text.Json.JsonSerializer.Serialize(entries);
+            string json = JsonSerializer.Serialize(entries);
             File.WriteAllText(Core.Constants.INDEX_FILE, json);
         }
 
