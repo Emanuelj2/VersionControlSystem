@@ -143,6 +143,3 @@ To understand version control concepts better:
 
 
 
----
-
-**Note**: SimpleVCS is for educational purposes and small-scale use. For production projects, use established version control systems like Git, Mercurial, or SVN.
