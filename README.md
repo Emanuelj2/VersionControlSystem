@@ -139,7 +139,7 @@ Each commit points to its parent, forming a linked history of changes.
 To understand version control concepts better:
 - [Git Internals](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain)
 - [Building Git](https://shop.jcoglan.com/building-git/)
-- [Write Yourself a Git](https://wyag.thb.lt/)
+
 
 
 
